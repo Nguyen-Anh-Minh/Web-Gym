@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartGym Elite - Trở Thành Phiên Bản Elite Của Chính Bạn</title>
+  <meta name="description" content="Trang web tập gym cao cấp SmartGym Elite. Thiết kế lộ trình tập luyện cá nhân hóa, lớp học chuyên nghiệp, PT huấn luyện 1-1 và cửa hàng thực phẩm bổ sung chính hãng.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  
+  <!-- Navigation Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-wrapper" id="btn-logo">
+        <span class="logo-text-left">SmartGym</span>
+        <span class="logo-text-right">Elite</span>
+      </div>
+      <nav class="nav-menu" id="header-nav">
+        <a href="#" class="nav-link active" id="nav-home">TRANG CHỦ</a>
+        <a href="#" class="nav-link" id="nav-trainers">HUẤN LUYỆN VIÊN</a>
+        <a href="#" class="nav-link" id="nav-membership"><i class="fa-solid fa-lock nav-lock-icon" id="icon-membership-lock"></i> HỘI VIÊN</a>
+        <a href="#" class="nav-link" id="nav-roadmap"><i class="fa-solid fa-lock nav-lock-icon" id="icon-roadmap-lock"></i> LỘ TRÌNH</a>
+        <a href="#" class="nav-link nav-link-admin hidden" id="nav-admin"><i class="fa-solid fa-shield-halved" style="color: var(--primary-yellow); margin-right:4px;"></i> ADMIN</a>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle theme" style="background: none; border: 1px solid var(--border-color); color: var(--text-primary); cursor: pointer; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; font-size: 14px;">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="btn-primary btn-join-nav" id="nav-auth-btn">THAM GIA NGAY</button>
+        
+        <!-- User Profile Dropdown (Active when Logged In) -->
+        <div class="user-profile-dropdown hidden" id="user-profile-menu">
+          <div class="profile-avatar" id="user-avatar-char">M</div>
+          <div class="dropdown-content">
+            <div class="dropdown-header">
+              <p class="user-display-name" id="user-profile-name">Hội Viên</p>
+              <p class="user-display-role" id="user-profile-role">Hội Viên</p>
+            </div>
+            <hr class="dropdown-divider">
+            <a href="#" id="dropdown-action-btn"><i class="fa-solid fa-dumbbell"></i> Vào Khảo Sát</a>
+            <a href="#" id="dropdown-logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+          </div>
+        </div>
+
+        <button class="menu-toggle-btn" id="mobile-menu-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="content-wrapper">
+    
+    <!-- SECTION 1: HOME PAGE INTRO -->
+    <section id="home-section" class="active-section">
+      <!-- Hero Header Section -->
+      <div class="home-hero" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1200&auto=format&fit=crop');">
+        <div class="hero-overlay-dark"></div>
+        <div class="hero-content-box">
+          <span class="hero-tag">CHÍNH XÁC. CƯỜNG ĐỘ. SANG TRỌNG.</span>
+          <h1 class="hero-main-title">TRẢI NGHIỆM ĐỈNH CAO CỦA THỂ HÌNH CHUYÊN NGHIỆP</h1>
+          <p class="hero-main-desc">Khám phá không gian luyện tập đẳng cấp được thiết kế riêng cho những người đòi hỏi sự hoàn hảo. Nâng tầm hiệu suất thể chất vượt giới hạn cùng chúng tôi.</p>
+          <div class="hero-buttons">
+            <button class="btn-primary" id="btn-hero-join">THAM GIA NGAY</button>
+            <button class="btn-secondary" id="btn-hero-classes">KHÁM PHÁ LỚP HỌC</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Counters Bar (White background, red numbers) -->
+      <div class="stats-counter-bar">
+        <div class="stats-container">
+          <div class="stat-counter-item">
+            <strong class="counter-number">15+</strong>
+            <span class="counter-label">NĂM HOẠT ĐỘNG</span>
+          </div>
+          <div class="stat-counter-item">
+            <strong class="counter-number">500+</strong>
+            <span class="counter-label">PT CHUYÊN NGHIỆP</span>
+          </div>
+          <div class="stat-counter-item">
+            <strong class="counter-number">200K+</strong>
+            <span class="counter-label">HỘI VIÊN TOÀN CẦU</span>
+          </div>
+          <div class="stat-counter-item">
+            <strong class="counter-number">50+</strong>
+            <span class="counter-label">CHI NHÁNH CAO CẤP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elite Training Programs Grid -->
+      <div class="programs-intro-section">
+        <div class="section-title-wrapper">
+          <h2 class="sub-section-title">CHƯƠNG TRÌNH TẬP LUYỆN ELITE</h2>
+          <p class="sub-section-subtitle">Giáo trình huấn luyện tối ưu được thiết kế nhằm khai phá sức mạnh tiềm ẩn của bạn. Cường độ cao, kỹ thuật chuẩn xác, hiệu quả rõ rệt.</p>
+          <a href="#" class="view-all-programs-link" id="btn-view-programs">XEM TẤT CẢ LỚP HỌC <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+        
+        <div class="programs-grid">
+          <div class="program-intro-card" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 100%), url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=400&auto=format&fit=crop');">
+            <div class="program-card-badge">TĂNG CƠ</div>
+            <div class="program-card-content">
+              <h3>Giao Thức Sắt (Iron Protocol)</h3>
+              <p>Chương trình tập tăng kích thước cơ bắp và phát triển lực đẩy tối đa.</p>
+            </div>
+          </div>
+          <div class="program-intro-card" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 100%), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=400&auto=format&fit=crop');">
+            <div class="program-card-badge">HIỆU SUẤT</div>
+            <div class="program-card-content">
+              <h3>Thể Lực Athletic</h3>
+              <p>Cải thiện sức bền tim mạch, tốc độ bức tốc và phản xạ linh hoạt.</p>
+            </div>
+          </div>
+          <div class="program-intro-card" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 100%), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=400&auto=format&fit=crop');">
+            <div class="program-card-badge">DẺO DAI</div>
+            <div class="program-card-content">
+              <h3>Vinyasa Yoga &amp; Phục Hồi</h3>
+              <p>Phục hồi biên độ chuyển động khớp và tăng dẻo dai cơ cốt lõi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Brand Philosophy / About Us -->
+      <div class="about-philosophy-section">
+        <div class="philosophy-container">
+          <div class="philosophy-image" style="background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=600&auto=format&fit=crop');"></div>
+          <div class="philosophy-content">
+            <span class="badge-red">TRIẾT LÝ SMARTGYM ELITE</span>
+            <h2>NƠI SỨC MẠNH HỘI TỤ VỚI PHONG CÁCH SỐNG ELITE</h2>
+            <p>SmartGym Elite không chỉ là một phòng tập gym thông thường. Chúng tôi là một phòng thí nghiệm về hiệu suất thể chất toàn diện, nơi kết hợp công nghệ khoa học thể thao hiện đại bậc nhất với không gian luyện tập sang trọng chuẩn tinh hoa.</p>
+            <p>Sứ mệnh của chúng tôi là giúp bạn khai phá sức mạnh tiềm ẩn lớn nhất của bản thân thông qua giáo án tập luyện khoa học, chế độ dinh dưỡng bám sát thực tiễn, PT đồng hành chuyên nghiệp và không gian thư giãn đẳng cấp sau tập.</p>
+            <div class="philosophy-features">
+              <div class="p-feature-item"><i class="fa-solid fa-microscope text-red"></i> <span>Khoa học & Cá nhân hóa</span></div>
+              <div class="p-feature-item"><i class="fa-solid fa-crown text-red"></i> <span>Dịch vụ chuẩn 5 sao</span></div>
+              <div class="p-feature-item"><i class="fa-solid fa-leaf text-red"></i> <span>Dinh dưỡng & Phục hồi sâu</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beginner Academy (Cẩm nang tập luyện) -->
+      <div class="beginner-academy-section">
+        <div class="academy-container">
+          <div class="section-title-wrapper text-center">
+            <span class="badge-red">HỌC VIỆN THỂ CHẤT</span>
+            <h2 class="sub-section-title">CẨM NANG CHO NGƯỜI MỚI BẮT ĐẦU</h2>
+            <p class="sub-section-subtitle">Trang bị kiến thức khoa học vững chắc là bước khởi đầu quan trọng nhất để đạt mục tiêu vóc dáng bền vững.</p>
+          </div>
+
+          <div class="academy-grid">
+            <!-- Concept 1: Progressive Overload -->
+            <div class="academy-card">
+              <div class="academy-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+              <h3>Quá Tải Lũy Tiến (Progressive Overload)</h3>
+              <p>Nguyên tắc cốt lõi của phát triển cơ bắp và sức bền. Để cơ thể tiến bộ, bạn phải liên tục tăng dần áp lực lên cơ bắp qua thời gian (bằng cách tăng tạ, tăng số reps, số sets hoặc giảm thời gian nghỉ). Lộ trình thích ứng tuần của SmartGym Elite sẽ tự động áp dụng công thức này.</p>
+            </div>
+
+            <!-- Concept 2: TDEE & Calo Deficit/Surplus -->
+            <div class="academy-card">
+              <div class="academy-icon"><i class="fa-solid fa-calculator"></i></div>
+              <h3>Tổng Calo Tiêu Thụ Hàng Ngày (TDEE)</h3>
+              <p>Chìa khóa vàng của kiểm soát cân nặng. Để giảm mỡ, bạn cần tạo thâm hụt calo (ăn ít calo hơn TDEE). Để tăng cơ, bạn cần dư thừa calo (ăn nhiều calo hơn TDEE). Hãy để công cụ khảo sát của chúng tôi tính toán chính xác TDEE và đề xuất macro phù hợp cho bạn.</p>
+            </div>
+
+            <!-- Concept 3: Macros Balance -->
+            <div class="academy-card">
+              <div class="academy-icon"><i class="fa-solid fa-plate-wheat"></i></div>
+              <h3>Dinh Dưỡng Đa Lượng (Macros)</h3>
+              <p>Tỷ lệ phân bổ Protein (Đạm - xây dựng cơ), Carbs (Tinh bột - nguồn năng lượng chạy máy cơ thể) và Fats (Chất béo tốt - điều hòa hoóc-môn). Việc phân chia tỷ lệ Macros cân đối giúp cơ bắp săn chắc, giảm mỡ sâu và phục hồi khớp xương dẻo dai hơn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Da Nang Branches & Google Maps -->
+      <div class="branches-location-section">
+        <div class="branches-container">
+          <div class="section-title-wrapper">
+            <span class="badge-red">CHI NHÁNH SMARTGYM ELITE</span>
+            <h2 class="sub-section-title">HỆ THỐNG PHÒNG TẬP CAO CẤP TẠI ĐÀ NẴNG</h2>
+            <p class="sub-section-subtitle">Không gian tập luyện chuẩn sang trọng, tọa lạc tại các vị trí đắc địa nhất thành phố Đà Nẵng.</p>
+          </div>
+
+          <div class="branches-grid">
+            <!-- Branch 1 -->
+            <div class="branch-card">
+              <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=400&auto=format&fit=crop');"></div>
+              <div class="branch-info">
+                <h3>SmartGym Elite Nguyễn Văn Linh</h3>
+                <p><i class="fa-solid fa-location-dot text-red"></i> 150 Nguyễn Văn Linh, Vĩnh Trung, Thanh Khê, Đà Nẵng</p>
+                <p><i class="fa-solid fa-phone text-red"></i> Hotline: 0236 3888 999</p>
+                <span class="branch-facility-tag"><i class="fa-solid fa-swimming-pool"></i> Bể bơi vô cực</span>
+                <span class="branch-facility-tag"><i class="fa-solid fa-hot-tub"></i> Xông hơi sauna</span>
+              </div>
+            </div>
+
+            <!-- Branch 2 -->
+            <div class="branch-card">
+              <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop');"></div>
+              <div class="branch-info">
+                <h3>SmartGym Elite Han River View</h3>
+                <p><i class="fa-solid fa-location-dot text-red"></i> 42 Bạch Đằng, Hải Châu 1, Hải Châu, Đà Nẵng</p>
+                <p><i class="fa-solid fa-phone text-red"></i> Hotline: 0236 3888 888</p>
+                <span class="branch-facility-tag"><i class="fa-solid fa-spa"></i> Yoga & Pilates deck</span>
+                <span class="branch-facility-tag"><i class="fa-solid fa-mug-hot"></i> Organic Juice bar</span>
+              </div>
+            </div>
+
+            <!-- Branch 3 -->
+            <div class="branch-card">
+              <div class="branch-image" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=400&auto=format&fit=crop');"></div>
+              <div class="branch-info">
+                <h3>SmartGym Elite Beachside Võ Nguyên Giáp</h3>
+                <p><i class="fa-solid fa-location-dot text-red"></i> 280 Võ Nguyên Giáp, Mỹ An, Ngũ Hành Sơn, Đà Nẵng</p>
+                <p><i class="fa-solid fa-phone text-red"></i> Hotline: 0236 3888 777</p>
+                <span class="branch-facility-tag"><i class="fa-solid fa-dumbbell"></i> Crossfit ngoài trời</span>
+                <span class="branch-facility-tag"><i class="fa-solid fa-snowflake"></i> Cryotherapy phục hồi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="map-wrapper">
+            <h3 class="map-title"><i class="fa-solid fa-map-marked-alt text-red"></i> BẢN ĐỒ ĐƯỜNG ĐI CHI TIẾT (CHI NHÁNH TRUNG TÂM NGUYỄN VĂN LINH)</h3>
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.9168924376483!2d108.2140683!3d16.0568114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219cc0d099907%3A0xe5566f1cb684c375!2zMTUwIE5ndXnhu4VuIFbEg24gTGluaCwgVsSpbmggVHJ1bmcsIFRoYW5oIEtow6osIMSQw6AgTuG6tW5n!5e0!3m2!1svi!2svn!4v1783274600000!5m2!1svi!2svn" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ROADMAP SECTION (Lộ trình) -->
+    <section id="roadmap-section" class="hidden-section">
+      <div class="roadmap-container">
+        
+        <!-- Locked State Overlay -->
+        <div class="roadmap-lock-overlay" id="roadmap-lock-overlay">
+          <i class="fa-solid fa-lock roadmap-lock-icon-huge"></i>
+          <h2>LỘ TRÌNH LUYỆN TẬP ĐANG BỊ KHÓA</h2>
+          <p>Tính năng lộ trình tập luyện cá nhân hóa tự động thích ứng với thể trạng và chỉ số sức khỏe của bạn hiện tại đang bị khóa. Vui lòng đăng ký Gói Thường hoặc Gói Premium để bắt đầu tập luyện.</p>
+          <button class="btn-primary pulsing-button" id="btn-roadmap-unlock-cta">KÍCH HOẠT THÀNH VIÊN NGAY</button>
+        </div>
+
+        <!-- Unlocked Roadmap Area -->
+        <div class="roadmap-unlocked-container hidden" id="roadmap-unlocked-container">
+          <div class="roadmap-header-row">
+            <span class="badge-red">LỘ TRÌNH CÁ NHÂN HÓA</span>
+            <h2 class="roadmap-main-title">BẢN ĐỒ THỂ CHẤT CỦA BẠN</h2>
+          </div>
+
+          <div class="roadmap-grid-layout">
+            
+            <!-- Left Side Column: Physical Stats Summary -->
+            <div class="roadmap-left-column">
+              <!-- BMI Card -->
+              <div class="roadmap-stat-card">
+                <h3>Thể trạng hiện tại (Chỉ số BMI)</h3>
+                
+                <div class="bmi-display">
+                  <div class="bmi-value" id="roadmap-bmi-value">22.5</div>
+                  <div class="bmi-class" id="roadmap-bmi-status">Bình Thường</div>
+                </div>
+
+                <div class="bmi-gauge-container">
+                  <div class="bmi-gauge-bar">
+                    <div class="bmi-gauge-pointer" id="roadmap-bmi-pointer" style="left: 45%;"></div>
+                  </div>
+                  <div class="bmi-gauge-labels">
+                    <span>Thiếu cân (&lt;18.5)</span>
+                    <span>Bình thường (18.5-24.9)</span>
+                    <span>Thừa cân (25-29.9)</span>
+                    <span>Béo phì (&ge;30)</span>
+                  </div>
+                </div>
+
+                <div class="stat-summary-rows">
+                  <div class="stat-row">
+                    <span class="stat-label">Chiều cao thực tế:</span>
+                    <span class="stat-val" id="roadmap-summary-height">170 cm</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Cân nặng hiện tại:</span>
+                    <span class="stat-val" id="roadmap-summary-weight">65 kg</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-label">Mục tiêu hướng tới:</span>
+                    <span class="stat-val id-highlight" id="roadmap-summary-target-weight">60 kg</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body Avatar Simulation Card -->
+              <div class="roadmap-stat-card">
+                <h3>Mô Phỏng Hình Thể (Body Avatar)</h3>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.4;">
+                  <i class="fa-solid fa-circle-info"></i> Bản đồ nhiệt cơ bắp dựa trên chỉ số tập luyện. (<span style="color: #ff4d4d;">■</span> Cần tập, <span style="color: #ffc83b;">■</span> Trung bình, <span style="color: #00cc66;">■</span> Phát triển tốt)
+                </p>
+                <div class="body-avatar-wrapper">
+                  <div class="body-avatar-container" id="body-avatar-container">
+                    <!-- SVG rendered dynamically by JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side Column: Goal modifier & Daily checklists -->
+            <div class="roadmap-right-column">
+              <!-- Goal changer header -->
+              <div class="roadmap-goal-box">
+                <div class="goal-selection-title">ĐIỀU CHỈNH MỤC TIÊU LUYỆN TẬP</div>
+                <div class="goal-tabs-wrapper" id="goal-tabs-wrapper">
+                  <!-- Dynamic tabs generated by JS -->
+                </div>
+              </div>
+
+
+              <!-- Roadmap Duration & Week Selector -->
+              <div class="roadmap-duration-header">
+                <div class="duration-info">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <span>Lộ trình: </span><strong id="roadmap-duration-label">3 Tháng (12 Tuần)</strong>
+                </div>
+                <div class="week-selector-row">
+                  <button class="week-nav-btn" id="btn-prev-week" onclick="changeWeek(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                  <span class="week-indicator" id="week-indicator-text">TUẦN 1</span>
+                  <button class="week-nav-btn" id="btn-next-week" onclick="changeWeek(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+              </div>
+
+              <!-- Roadmap Days Checklist Grid (Dynamic) -->
+              <h3 class="roadmap-grid-title"><i class="fa-solid fa-list-check"></i> NHIỆM VỤ TUẦN NÀY</h3>
+              <div class="roadmap-days-grid" id="roadmap-days-grid">
+                <!-- Sessions rendered by JS -->
+              </div>
+
+              <!-- Roadmap completion footer progress -->
+              <div class="roadmap-progress-card">
+                <div class="progress-info-row">
+                  <span id="roadmap-tasks-completed-text">Đã hoàn thành: 0 / 9 nhiệm vụ</span>
+                  <span class="progress-percentage-text" id="roadmap-tasks-percent-text">0%</span>
+                </div>
+                <div class="roadmap-progress-bar-bg">
+                  <div class="roadmap-progress-bar-fill" id="roadmap-tasks-progress-bar" style="width: 0%;"></div>
+                </div>
+                <button class="btn-primary btn-evolve-body disabled" id="btn-evolve-body" disabled>
+                  <i class="fa-solid fa-circle-check"></i> CẬP NHẬT THỂ TRẠNG &amp; HOÀN THÀNH LỘ TRÌNH
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- New Bottom Layout Section for Detailed Stats, Nutrition, and Warnings -->
+          <div class="roadmap-bottom-layout">
+            <!-- Left Side Column: Detailed stats meters -->
+            <div class="roadmap-stat-card">
+              <h3>Chỉ Số Cơ Thể Chi Tiết</h3>
+              <div class="macro-bars">
+                <!-- Fat % -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Tỉ Lệ Mỡ Cơ Thể</span><span id="roadmap-val-fat">20%</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-fat" style="width: 20%; background-color: #ff9f43;"></div></div>
+                </div>
+                <!-- Muscle % -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Khối Lượng Cơ Bắp</span><span id="roadmap-val-muscle">35%</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-muscle" style="width: 35%; background-color: #10ac84;"></div></div>
+                </div>
+                <!-- Cardio -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Sức Bền Tim Mạch</span><span id="roadmap-val-cardio">30/100</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-cardio" style="width: 30%; background-color: #54a0ff;"></div></div>
+                </div>
+                <!-- Flexibility -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Độ Dẻo Dai Khớp</span><span id="roadmap-val-flex">30/100</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-flex" style="width: 30%; background-color: #00d2d3;"></div></div>
+                </div>
+                
+                <h4 style="margin: 15px 0 10px 0; font-size: 0.85rem; color: var(--primary-yellow); letter-spacing: 1px;">PHÁT TRIỂN CƠ BẮP</h4>
+                <!-- Chest -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Cơ Ngực</span><span id="roadmap-val-chest">30/100</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-chest" style="width: 30%; background-color: #ff4d4d;"></div></div>
+                </div>
+                <!-- Arm -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Cơ Tay (Nhị đầu/Tam đầu)</span><span id="roadmap-val-arm">30/100</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-arm" style="width: 30%; background-color: #ff4d4d;"></div></div>
+                </div>
+                <!-- Shoulder -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Cơ Vai</span><span id="roadmap-val-shoulder">30/100</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-shoulder" style="width: 30%; background-color: #ff4d4d;"></div></div>
+                </div>
+                <!-- Leg -->
+                <div class="macro-bar-group">
+                  <div class="macro-info"><span>Cơ Chân / Đùi</span><span id="roadmap-val-leg">30/100</span></div>
+                  <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-leg" style="width: 30%; background-color: #ff4d4d;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side Column: Nutrition stats & Injury warnings -->
+            <div class="roadmap-bottom-right-col" style="display: flex; flex-direction: column; gap: 24px;">
+              <!-- Nutrition stats -->
+              <div class="roadmap-stat-card">
+                <h3>Dinh dưỡng hàng ngày khuyên dùng</h3>
+                
+                <div class="nutrition-grid">
+                  <div class="nutrition-item">
+                    <i class="fa-solid fa-fire text-red"></i>
+                    <div class="nutrition-info">
+                      <span class="nutri-label">NĂNG LƯỢC TIÊU THỤ</span>
+                      <strong class="nutri-value" id="roadmap-nutri-calories">2,100 kcal</strong>
+                    </div>
+                  </div>
+                  <div class="nutrition-item">
+                    <i class="fa-solid fa-droplet text-blue"></i>
+                    <div class="nutrition-info">
+                      <span class="nutri-label">LƯỢNG NƯỚC UỐNG</span>
+                      <strong class="nutri-value" id="roadmap-nutri-water">2.5 Lít</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="macro-bars" style="margin-top: 20px;">
+                  <div class="macro-bar-group">
+                    <div class="macro-info"><span>Protein (Đạm)</span><span id="roadmap-macro-protein">120g</span></div>
+                    <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-protein" style="width: 30%; background-color: #ff0e47;"></div></div>
+                  </div>
+                  <div class="macro-bar-group">
+                    <div class="macro-info"><span>Carbs (Tinh bột)</span><span id="roadmap-macro-carbs">230g</span></div>
+                    <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-carbs" style="width: 50%; background-color: #ffd500;"></div></div>
+                  </div>
+                  <div class="macro-bar-group">
+                    <div class="macro-info"><span>Fats (Chất béo)</span><span id="roadmap-macro-fats">60g</span></div>
+                    <div class="macro-progress-bg"><div class="macro-progress-fill" id="roadmap-fill-fats" style="width: 20%; background-color: #26a69a;"></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Health warning -->
+              <div class="roadmap-stat-card warning-stat-card" id="roadmap-warning-card">
+                <div class="warning-header">
+                  <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+                  <h3>Lưu ý sức khỏe chấn thương</h3>
+                </div>
+                <ul class="warning-list" id="roadmap-warning-list">
+                  <li>Không có lưu ý đặc biệt. Bạn có thể luyện tập bình thường.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 3: TRAINERS SECTION -->
+    <section id="trainers-section" class="hidden-section">
+      <div class="trainers-container">
+        <h2 class="section-title text-center">ĐỘI NGŨ HUẤN LUYỆN VIÊN ELITE</h2>
+        <p class="section-subtitle text-center">Sự chỉ dẫn kỹ thuật chuyên sâu từ các vận động viên chuyên nghiệp. Chọn PT phù hợp để vượt qua ngưỡng giới hạn và kiến tạo vóc dáng tối ưu.</p>
+        
+        <!-- Filter Tabs -->
+        <div class="trainers-filter-tabs">
+          <button class="trainer-tab-btn active" data-filter="all">TẤT CẢ</button>
+          <button class="trainer-tab-btn" data-filter="strength">SỨC MẠNH</button>
+          <button class="trainer-tab-btn" data-filter="mobility">DẺO DAI</button>
+        </div>
+
+        <div class="trainers-grid">
+          <!-- Trainer 1 -->
+          <div class="trainer-card" data-category="strength" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=400&auto=format&fit=crop');">
+            <div class="trainer-badge-row">
+              <span class="tr-badge-type">THỂ HÌNH</span>
+              <span class="tr-badge-exp">12 NĂM KINH NGHIỆM</span>
+            </div>
+            <div class="trainer-card-content">
+              <h3>MARCUS <span class="highlight-red">VANE</span></h3>
+              <p class="trainer-desc">Vận động viên IFBB Pro chuyên biệt về phát triển cơ bắp, chuẩn bị thi đấu và tái cấu trúc hình thể toàn diện.</p>
+              <div class="trainer-certifications">Chứng chỉ quốc tế: NASM CPT | CSCS</div>
+              <div class="trainer-buttons">
+                <button class="btn-primary tr-btn-book" onclick="alert('Đặt lịch hẹn tư vấn với Marcus Vane thành công!')">ĐẶT LỊCH PT</button>
+                <button class="btn-secondary tr-btn-profile" onclick="alert('Đang tải thông tin hồ sơ chi tiết của Marcus Vane...')">HỒ SƠ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 2 -->
+          <div class="trainer-card" data-category="mobility" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=400&auto=format&fit=crop');">
+            <div class="trainer-badge-row">
+              <span class="tr-badge-type">YOGA &amp; DẺO DAI</span>
+              <span class="tr-badge-exp">8 NĂM KINH NGHIỆM</span>
+            </div>
+            <div class="trainer-card-content">
+              <h3>ELENA <span class="highlight-red">ROSTOVA</span></h3>
+              <p class="trainer-desc">Chuyên gia phân tích chuyển động cơ thể, giảm thiểu nguy cơ chấn thương và tối ưu hóa hệ thần kinh vận động.</p>
+              <div class="trainer-certifications">Chứng chỉ quốc tế: RYT 500 | FRCms</div>
+              <div class="trainer-buttons">
+                <button class="btn-primary tr-btn-book" onclick="alert('Đặt lịch hẹn tư vấn với Elena Rostova thành công!')">ĐẶT LỊCH PT</button>
+                <button class="btn-secondary tr-btn-profile" onclick="alert('Đang tải thông tin hồ sơ chi tiết của Elena Rostova...')">HỒ SƠ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trainer 3 -->
+          <div class="trainer-card" data-category="strength" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop');">
+            <div class="trainer-badge-row">
+              <span class="tr-badge-type">THỂ LỰC ATHLETIC</span>
+              <span class="tr-badge-exp">15 NĂM KINH NGHIỆM</span>
+            </div>
+            <div class="trainer-card-content">
+              <h3>JAXON <span class="highlight-red">STEELE</span></h3>
+              <p class="trainer-desc">Cựu vận động viên chạy nước rút Olympic, chuyên gia đào tạo khả năng bộc phát lực, tốc độ phản xạ và nâng cơ bền.</p>
+              <div class="trainer-certifications">Chứng chỉ quốc tế: USATF L2 | EXOS</div>
+              <div class="trainer-buttons">
+                <button class="btn-primary tr-btn-book" onclick="alert('Đặt lịch hẹn tư vấn với Jaxon Steele thành công!')">ĐẶT LỊCH PT</button>
+                <button class="btn-secondary tr-btn-profile" onclick="alert('Đang tải thông tin hồ sơ chi tiết của Jaxon Steele...')">HỒ SƠ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 5: AUTH SECTION (REGISTER & LOGIN SPLIT VIEW) -->
+    <section id="auth-section" class="hidden-section">
+      <div class="auth-split-container">
+        
+        <!-- Left Side Column (Dark, text details) -->
+        <div class="auth-left-panel" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.95) 100%), url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop');">
+          <div class="panel-header-logo">
+            <i class="fa-solid fa-circle-radiation logo-icon-yellow"></i>
+            <span>ELITE FITNESS</span>
+          </div>
+          <div class="panel-slogan-box">
+            <h2>TRỞ THÀNH<br><span class="highlight-yellow">PHIÊN BẢN ELITE</span><br>CỦA CHÍNH BẠN</h2>
+            <p>Khám phá trải nghiệm thể hình cao cấp nhất tại Elite Fitness. Nâng tầm bản thân ngay hôm nay.</p>
+          </div>
+          <div class="panel-benefits-list">
+            <div class="panel-benefit-item"><i class="fa-solid fa-check-circle"></i><span>Lộ trình tập luyện cá nhân hóa 100%</span></div>
+            <div class="panel-benefit-item"><i class="fa-solid fa-check-circle"></i><span>Tư vấn dinh dưỡng &amp; phục hồi chuyên sâu</span></div>
+            <div class="panel-benefit-item"><i class="fa-solid fa-check-circle"></i><span>Theo dõi tiến trình thể trạng theo thời gian thực</span></div>
+          </div>
+        </div>
+
+        <!-- Right Side Column (Forms) -->
+        <div class="auth-right-panel">
+          
+          <!-- Tab switcher -->
+          <div class="auth-tab-switcher">
+            <button class="auth-tab-btn active" id="tab-btn-login" onclick="window.switchAuthTab('login')">ĐĂNG NHẬP</button>
+            <button class="auth-tab-btn" id="tab-btn-register" onclick="window.switchAuthTab('register')">ĐĂNG KÝ</button>
+          </div>
+
+          <!-- LOGIN FORM -->
+          <div class="auth-form-panel" id="login-form-panel">
+            <h3 class="auth-form-title">Chào mừng trở lại</h3>
+            <p class="auth-form-sub">Nhập thông tin tài khoản của bạn</p>
+            <div class="auth-input-group">
+              <label>Tên đăng nhập</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="login-username" placeholder="Nhập tên đăng nhập..." autocomplete="username">
+              </div>
+            </div>
+            <div class="auth-input-group">
+              <label>Mật khẩu</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="login-password" placeholder="Nhập mật khẩu..." autocomplete="current-password">
+              </div>
+            </div>
+            <p class="auth-error-msg hidden" id="login-error-msg">Tên đăng nhập hoặc mật khẩu không đúng!</p>
+            <button class="btn-primary auth-submit-btn" id="btn-login-submit">ĐĂNG NHẬP</button>
+          </div>
+
+          <!-- REGISTER FORM -->
+          <div class="auth-form-panel hidden" id="register-form-panel">
+            <h3 class="auth-form-title">Tạo tài khoản mới</h3>
+            <p class="auth-form-sub">Điền thông tin để bắt đầu hành trình</p>
+            <div class="auth-input-group">
+              <label>Họ và tên</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="text" id="reg-fullname" placeholder="Nhập họ và tên..." autocomplete="name">
+              </div>
+            </div>
+            <div class="auth-input-group">
+              <label>Tên đăng nhập</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="reg-username" placeholder="Nhập tên đăng nhập..." autocomplete="username">
+              </div>
+            </div>
+            <div class="auth-input-group">
+              <label>Mật khẩu</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="reg-password" placeholder="Nhập mật khẩu..." autocomplete="new-password">
+              </div>
+            </div>
+            <div class="auth-input-group">
+              <label>Email</label>
+              <div class="input-icon-wrapper">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="reg-email" placeholder="Nhập địa chỉ email..." autocomplete="email">
+              </div>
+            </div>
+            <p class="auth-error-msg hidden" id="register-error-msg">Tên đăng nhập đã tồn tại!</p>
+            <p class="auth-success-msg hidden" id="register-success-msg">Đăng ký thành công! Đang chuyển đến đăng nhập...</p>
+            <button class="btn-primary auth-submit-btn" id="btn-register-submit">TẠO TÀI KHOẢN</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: MEMBERSHIP SURVEY SECTION (30 Questions) -->
+    <section id="membership-section" class="hidden-section">
+      <div class="survey-container">
+        <div class="survey-header">
+          <span class="badge-red">KHẢO SÁT SỨC KHỎE</span>
+          <h2>30 CÂU HỎI PHÂN TÍCH THỂ TRẠNG</h2>
+          <p>Hãy trả lời đầy đủ để SmartGym Elite có thể xây dựng lộ trình luyện tập tối ưu nhất cho bạn.</p>
+          <div class="survey-progress-wrapper">
+            <div class="survey-progress-bar-bg"><div class="survey-progress-bar-fill" id="survey-progress-bar" style="width:0%"></div></div>
+            <span class="survey-progress-text" id="survey-progress-text">0 / 30 câu</span>
+          </div>
+        </div>
+
+        <form class="survey-form" id="survey-form">
+          <!-- Group 1: Basic Info -->
+          <div class="survey-group">
+            <div class="survey-group-title"><i class="fa-solid fa-ruler-combined"></i> THÔNG TIN CƠ BẢN</div>
+            
+            <div class="survey-question-card">
+              <div class="q-number">01</div>
+              <div class="q-content">
+                <p class="q-text">Chiều cao của bạn (cm)?</p>
+                <input type="number" class="survey-input" id="q1" name="q1" placeholder="Ví dụ: 170" min="100" max="250">
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">02</div>
+              <div class="q-content">
+                <p class="q-text">Cân nặng hiện tại của bạn (kg)?</p>
+                <input type="number" class="survey-input" id="q2" name="q2" placeholder="Ví dụ: 65" min="20" max="300">
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">03</div>
+              <div class="q-content">
+                <p class="q-text">Tuổi của bạn?</p>
+                <input type="number" class="survey-input" id="q3" name="q3" placeholder="Ví dụ: 25" min="10" max="100">
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">04</div>
+              <div class="q-content">
+                <p class="q-text">Cân nặng mục tiêu bạn muốn đạt được (kg)?</p>
+                <input type="number" class="survey-input" id="q4" name="q4" placeholder="Ví dụ: 60" min="20" max="300">
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">05</div>
+              <div class="q-content">
+                <p class="q-text">Giới tính sinh học của bạn là gì?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q5" value="Nam"> Nam</label>
+                  <label class="survey-option-btn"><input type="radio" name="q5" value="Nữ"> Nữ</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">06</div>
+              <div class="q-content">
+                <p class="q-text">Mục tiêu luyện tập của bạn là gì? (Có thể chọn nhiều mục tiêu)</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Giảm Cân"> Giảm Cân &amp; Đốt Mỡ</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Tăng Cơ Bắp"> Tăng Cơ Toàn Thân &amp; Sức Mạnh</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Tăng Cơ Tay"> Tăng Kích Thước Cơ Tay</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Tăng Cơ Chân"> Tăng Sức Mạnh Cơ Chân</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Tăng Cơ Vai"> Phát Triển Cơ Vai Rộng</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Tăng Cơ Ngực"> Kiến Tạo Cơ Ngực Vạm Vỡ</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Tăng Sức Bền Tim Mạch"> Tăng Sức Bền &amp; Tim Mạch</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Dẻo Dai & Yoga"> Độ Dẻo Dai &amp; Yoga</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Cắt Nét Cơ"> Cắt Nét Cơ &amp; Siết Mỡ</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q6" value="Cải Thiện Tư Thế"> Cải Thiện Tư Thế &amp; Đau Mỏi</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 2: Health & Medical -->
+          <div class="survey-group">
+            <div class="survey-group-title"><i class="fa-solid fa-heartbeat"></i> SỨC KHỎE &amp; BỆNH LÝ</div>
+            
+            <div class="survey-question-card">
+              <div class="q-number">07</div>
+              <div class="q-content">
+                <p class="q-text">Bạn có mắc bệnh lý nào không? (Chọn tất cả phù hợp)</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="checkbox" name="q7" value="Không có"> Không có</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q7" value="Tiểu đường"> Tiểu đường</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q7" value="Huyết áp cao"> Huyết áp cao</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q7" value="Tim mạch"> Bệnh tim mạch</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q7" value="Xương khớp"> Đau xương khớp</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q7" value="Khác"> Bệnh khác</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">08</div>
+              <div class="q-content">
+                <p class="q-text">Bạn có tiền sử chấn thương thể thao không?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q8" value="Không"> Không có</label>
+                  <label class="survey-option-btn"><input type="radio" name="q8" value="Đầu gối"> Đầu gối</label>
+                  <label class="survey-option-btn"><input type="radio" name="q8" value="Lưng"> Đau lưng / cột sống</label>
+                  <label class="survey-option-btn"><input type="radio" name="q8" value="Vai"> Vai / cánh tay</label>
+                  <label class="survey-option-btn"><input type="radio" name="q8" value="Khác"> Vị trí khác</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">09</div>
+              <div class="q-content">
+                <p class="q-text">Mức độ căng thẳng (stress) hàng ngày của bạn?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q9" value="Thấp"> Thấp (bình tĩnh)</label>
+                  <label class="survey-option-btn"><input type="radio" name="q9" value="Trung bình"> Trung bình</label>
+                  <label class="survey-option-btn"><input type="radio" name="q9" value="Cao"> Cao</label>
+                  <label class="survey-option-btn"><input type="radio" name="q9" value="Rất cao"> Rất cao (thường xuyên)</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">10</div>
+              <div class="q-content">
+                <p class="q-text">Số giờ ngủ trung bình mỗi đêm của bạn?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q10" value="Dưới 5 giờ"> Dưới 5 giờ</label>
+                  <label class="survey-option-btn"><input type="radio" name="q10" value="5-6 giờ"> 5–6 giờ</label>
+                  <label class="survey-option-btn"><input type="radio" name="q10" value="6-7 giờ"> 6–7 giờ</label>
+                  <label class="survey-option-btn"><input type="radio" name="q10" value="7-8 giờ"> 7–8 giờ</label>
+                  <label class="survey-option-btn"><input type="radio" name="q10" value="Trên 8 giờ"> Trên 8 giờ</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">11</div>
+              <div class="q-content">
+                <p class="q-text">Bạn có hút thuốc lá không?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q11" value="Không"> Không bao giờ</label>
+                  <label class="survey-option-btn"><input type="radio" name="q11" value="Đã bỏ"> Đã bỏ thuốc</label>
+                  <label class="survey-option-btn"><input type="radio" name="q11" value="Thỉnh thoảng"> Thỉnh thoảng</label>
+                  <label class="survey-option-btn"><input type="radio" name="q11" value="Thường xuyên"> Thường xuyên</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 3: Exercise History -->
+          <div class="survey-group">
+            <div class="survey-group-title"><i class="fa-solid fa-dumbbell"></i> LỊCH SỬ TẬP LUYỆN</div>
+            
+            <div class="survey-question-card">
+              <div class="q-number">12</div>
+              <div class="q-content">
+                <p class="q-text">Kinh nghiệm tập luyện của bạn là bao nhiêu?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q12" value="Người mới"> Người mới bắt đầu</label>
+                  <label class="survey-option-btn"><input type="radio" name="q12" value="6 tháng"> 6 tháng – 1 năm</label>
+                  <label class="survey-option-btn"><input type="radio" name="q12" value="1-2 năm"> 1–2 năm</label>
+                  <label class="survey-option-btn"><input type="radio" name="q12" value="Trên 3 năm"> Trên 3 năm</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">13</div>
+              <div class="q-content">
+                <p class="q-text">Tần suất tập luyện của bạn hiện tại?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q13" value="Không tập"> Không tập</label>
+                  <label class="survey-option-btn"><input type="radio" name="q13" value="1-2 ngày"> 1–2 ngày/tuần</label>
+                  <label class="survey-option-btn"><input type="radio" name="q13" value="3-4 ngày"> 3–4 ngày/tuần</label>
+                  <label class="survey-option-btn"><input type="radio" name="q13" value="5+ ngày"> 5+ ngày/tuần</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">14</div>
+              <div class="q-content">
+                <p class="q-text">Thời gian tập luyện mỗi buổi của bạn?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q14" value="Dưới 30 phút"> Dưới 30 phút</label>
+                  <label class="survey-option-btn"><input type="radio" name="q14" value="30-45 phút"> 30–45 phút</label>
+                  <label class="survey-option-btn"><input type="radio" name="q14" value="45-60 phút"> 45–60 phút</label>
+                  <label class="survey-option-btn"><input type="radio" name="q14" value="Trên 60 phút"> Trên 60 phút</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">15</div>
+              <div class="q-content">
+                <p class="q-text">Loại bài tập bạn ưa thích?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="checkbox" name="q15" value="Tạ tự do"> Tạ tự do (Free Weight)</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q15" value="Cardio"> Cardio (chạy, xe đạp...)</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q15" value="HIIT"> HIIT cường độ cao</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q15" value="Yoga"> Yoga / Pilates</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q15" value="Calisthenics"> Calisthenics</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">16</div>
+              <div class="q-content">
+                <p class="q-text">Bạn đã từng tập với PT (Huấn luyện viên cá nhân) chưa?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q16" value="Chưa"> Chưa bao giờ</label>
+                  <label class="survey-option-btn"><input type="radio" name="q16" value="Ngắn hạn"> Đã thử ngắn hạn</label>
+                  <label class="survey-option-btn"><input type="radio" name="q16" value="Dài hạn"> Tập dài hạn cùng PT</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 4: Nutrition -->
+          <div class="survey-group">
+            <div class="survey-group-title"><i class="fa-solid fa-apple-whole"></i> CHẾ ĐỘ ĂN UỐNG</div>
+            
+            <div class="survey-question-card">
+              <div class="q-number">17</div>
+              <div class="q-content">
+                <p class="q-text">Chế độ ăn hiện tại của bạn?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q17" value="Không kiểm soát"> Ăn uống thoải mái</label>
+                  <label class="survey-option-btn"><input type="radio" name="q17" value="Kiểm soát nhẹ"> Kiểm soát nhẹ</label>
+                  <label class="survey-option-btn"><input type="radio" name="q17" value="Kiểm soát chặt"> Theo dõi calories chặt</label>
+                  <label class="survey-option-btn"><input type="radio" name="q17" value="Eat clean"> Ăn sạch (eat clean)</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">18</div>
+              <div class="q-content">
+                <p class="q-text">Số bữa ăn chính mỗi ngày của bạn?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q18" value="1-2 bữa"> 1–2 bữa</label>
+                  <label class="survey-option-btn"><input type="radio" name="q18" value="3 bữa"> 3 bữa</label>
+                  <label class="survey-option-btn"><input type="radio" name="q18" value="4-5 bữa"> 4–5 bữa nhỏ</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">19</div>
+              <div class="q-content">
+                <p class="q-text">Bạn có dị ứng hoặc kiêng thực phẩm nào không?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="checkbox" name="q19" value="Không"> Không có</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q19" value="Hải sản"> Hải sản</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q19" value="Lactose"> Sữa / Lactose</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q19" value="Gluten"> Gluten (lúa mì)</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q19" value="Đậu phộng"> Đậu phộng</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q19" value="Chay"> Ăn chay (vegetarian)</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">20</div>
+              <div class="q-content">
+                <p class="q-text">Bạn uống bao nhiêu nước mỗi ngày?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q20" value="Dưới 1 lít"> Dưới 1 lít</label>
+                  <label class="survey-option-btn"><input type="radio" name="q20" value="1-1.5 lít"> 1–1.5 lít</label>
+                  <label class="survey-option-btn"><input type="radio" name="q20" value="1.5-2.5 lít"> 1.5–2.5 lít</label>
+                  <label class="survey-option-btn"><input type="radio" name="q20" value="Trên 2.5 lít"> Trên 2.5 lít</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">21</div>
+              <div class="q-content">
+                <p class="q-text">Bạn có sử dụng thực phẩm bổ sung (supplement) không?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="checkbox" name="q21" value="Không"> Không dùng</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q21" value="Whey Protein"> Whey Protein</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q21" value="Creatine"> Creatine</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q21" value="Pre-workout"> Pre-workout</label>
+                  <label class="survey-option-btn"><input type="checkbox" name="q21" value="Vitamin"> Vitamin / Khoáng chất</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group 5: Lifestyle & Goals -->
+          <div class="survey-group">
+            <div class="survey-group-title"><i class="fa-solid fa-person-running"></i> LỐI SỐNG &amp; MỤC TIÊU</div>
+            
+            <div class="survey-question-card">
+              <div class="q-number">22</div>
+              <div class="q-content">
+                <p class="q-text">Mức độ vận động trong công việc/sinh hoạt hàng ngày?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q22" value="Ngồi nhiều"> Ngồi nhiều (văn phòng)</label>
+                  <label class="survey-option-btn"><input type="radio" name="q22" value="Đi lại nhẹ"> Đi lại nhẹ nhàng</label>
+                  <label class="survey-option-btn"><input type="radio" name="q22" value="Vận động vừa"> Vận động vừa phải</label>
+                  <label class="survey-option-btn"><input type="radio" name="q22" value="Vận động nhiều"> Công việc tay chân nặng</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">23</div>
+              <div class="q-content">
+                <p class="q-text">Bạn muốn tập luyện vào thời điểm nào trong ngày?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q23" value="Sáng"> Buổi sáng (5:00–9:00)</label>
+                  <label class="survey-option-btn"><input type="radio" name="q23" value="Trưa"> Buổi trưa (11:00–14:00)</label>
+                  <label class="survey-option-btn"><input type="radio" name="q23" value="Chiều"> Buổi chiều (15:00–18:00)</label>
+                  <label class="survey-option-btn"><input type="radio" name="q23" value="Tối"> Buổi tối (18:00–22:00)</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">24</div>
+              <div class="q-content">
+                <p class="q-text">Bạn muốn đạt mục tiêu trong bao lâu?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q24" value="1 tháng"> 1 tháng</label>
+                  <label class="survey-option-btn"><input type="radio" name="q24" value="3 tháng"> 3 tháng</label>
+                  <label class="survey-option-btn"><input type="radio" name="q24" value="6 tháng"> 6 tháng</label>
+                  <label class="survey-option-btn"><input type="radio" name="q24" value="1 năm"> 1 năm trở lên</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">25</div>
+              <div class="q-content">
+                <p class="q-text">Bạn muốn đăng ký gói dịch vụ nào?</p>
+                <div class="survey-options-grid survey-package-cards">
+                  <label class="survey-option-btn survey-package-regular">
+                    <input type="radio" name="q25" value="Gói Thường">
+                    <div class="package-info">
+                      <strong>Gói Thường</strong>
+                      <span>Lộ trình + Chỉ số sức khỏe</span>
+                      <span class="package-price">299K/tháng</span>
+                    </div>
+                  </label>
+                  <label class="survey-option-btn survey-package-premium">
+                    <input type="radio" name="q25" value="Gói Premium">
+                    <div class="package-info">
+                      <strong>Gói Premium ⭐</strong>
+                      <span>Lộ trình + PT 1-1 + Video hướng dẫn</span>
+                      <span class="package-price">799K/tháng</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">26</div>
+              <div class="q-content">
+                <p class="q-text">Điều gì thúc đẩy bạn bắt đầu hành trình thay đổi vóc dáng?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q26" value="Sức khỏe"> Cải thiện sức khỏe</label>
+                  <label class="survey-option-btn"><input type="radio" name="q26" value="Ngoại hình"> Cải thiện ngoại hình</label>
+                  <label class="survey-option-btn"><input type="radio" name="q26" value="Thể thao"> Phục vụ thi đấu thể thao</label>
+                  <label class="survey-option-btn"><input type="radio" name="q26" value="Tự tin"> Tăng sự tự tin</label>
+                  <label class="survey-option-btn"><input type="radio" name="q26" value="Giảm stress"> Giảm căng thẳng</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">27</div>
+              <div class="q-content">
+                <p class="q-text">Nhóm cơ bạn muốn ưu tiên tập trung nhất?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q27" value="Toàn thân"> Toàn thân</label>
+                  <label class="survey-option-btn"><input type="radio" name="q27" value="Cơ ngực"> Cơ ngực</label>
+                  <label class="survey-option-btn"><input type="radio" name="q27" value="Cơ tay"> Cơ tay</label>
+                  <label class="survey-option-btn"><input type="radio" name="q27" value="Cơ chân/mông"> Cơ chân / mông</label>
+                  <label class="survey-option-btn"><input type="radio" name="q27" value="Cơ vai"> Cơ vai</label>
+                  <label class="survey-option-btn"><input type="radio" name="q27" value="Cơ bụng/core"> Cơ bụng / Core</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">28</div>
+              <div class="q-content">
+                <p class="q-text">Số bước chân trung bình mỗi ngày của bạn?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q28" value="Dưới 5000"> Dưới 5,000 bước</label>
+                  <label class="survey-option-btn"><input type="radio" name="q28" value="5000-10000"> 5,000 - 10,000 bước</label>
+                  <label class="survey-option-btn"><input type="radio" name="q28" value="Trên 10000"> Trên 10,000 bước</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">29</div>
+              <div class="q-content">
+                <p class="q-text">Bạn sẵn sàng đầu tư thế nào vào chế độ dinh dưỡng hàng ngày (Whey, ức gà, cá hồi...)?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q29" value="Tối đa"> Sẵn sàng đầu tư tối đa</label>
+                  <label class="survey-option-btn"><input type="radio" name="q29" value="Vừa phải"> Đầu tư ở mức vừa phải</label>
+                  <label class="survey-option-btn"><input type="radio" name="q29" value="Tiết kiệm"> Tiết kiệm / ăn uống bình thường</label>
+                </div>
+              </div>
+            </div>
+            <div class="survey-question-card">
+              <div class="q-number">30</div>
+              <div class="q-content">
+                <p class="q-text">Thiết bị bạn sử dụng để theo dõi sức khỏe / tập luyện?</p>
+                <div class="survey-options-grid">
+                  <label class="survey-option-btn"><input type="radio" name="q30" value="Không dùng"> Không sử dụng</label>
+                  <label class="survey-option-btn"><input type="radio" name="q30" value="Điện thoại"> Điện thoại thông minh</label>
+                  <label class="survey-option-btn"><input type="radio" name="q30" value="Đồng hồ"> Đồng hồ thông minh / Vòng đeo tay sức khỏe</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="survey-submit-area">
+            <p class="survey-submit-note">* Sau khi hoàn thành khảo sát, hệ thống sẽ tự động tạo lộ trình tập luyện phù hợp nhất cho bạn.</p>
+            <button type="submit" class="btn-primary survey-submit-btn" id="btn-survey-submit">
+              <i class="fa-solid fa-rocket"></i> HOÀN THÀNH &amp; TẠO LỘ TRÌNH NGAY
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PT PORTAL SECTION -->
+    <section id="pt-portal-section" class="hidden-section">
+      <div class="pt-portal-container">
+        <div class="pt-portal-header">
+          <span class="badge-red">CỔNG THÔNG TIN</span>
+          <h2>TRANG QUẢN LÝ HUẤN LUYỆN VIÊN</h2>
+          <p>Quản lý học viên, theo dõi tiến trình và điều chỉnh lộ trình luyện tập cá nhân hóa.</p>
+        </div>
+
+        <div class="pt-dashboard-grid">
+          <!-- Member Stats Overview -->
+          <div class="pt-overview-card">
+            <h3><i class="fa-solid fa-users"></i> Thống Kê Học Viên</h3>
+            <div class="pt-stats-row">
+              <div class="pt-stat-item">
+                <span class="pt-stat-number" id="pt-total-members">0</span>
+                <span class="pt-stat-label">Tổng hội viên</span>
+              </div>
+              <div class="pt-stat-item">
+                <span class="pt-stat-number text-red" id="pt-premium-members">0</span>
+                <span class="pt-stat-label">Gói Premium</span>
+              </div>
+              <div class="pt-stat-item">
+                <span class="pt-stat-number text-yellow" id="pt-regular-members">0</span>
+                <span class="pt-stat-label">Gói Thường</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Members List -->
+          <div class="pt-members-list-card">
+            <h3><i class="fa-solid fa-list"></i> Danh Sách Học Viên</h3>
+            <div class="pt-members-table-wrapper">
+              <table class="pt-members-table">
+                <thead>
+                  <tr>
+                    <th>Họ và Tên</th>
+                    <th>Gói</th>
+                    <th>Mục tiêu</th>
+                    <th>BMI</th>
+                    <th>Tiến trình</th>
+                  </tr>
+                </thead>
+                <tbody id="pt-members-tbody">
+                  <tr>
+                    <td colspan="5" style="text-align:center; padding: 24px; color: #888;">Chưa có học viên nào đăng ký.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- PT Quick Actions -->
+          <div class="pt-actions-card">
+            <h3><i class="fa-solid fa-sliders"></i> Công Cụ PT</h3>
+            <div class="pt-action-buttons">
+              <button class="pt-action-btn" onclick="alert('Đang tải báo cáo tiến trình hội viên...')">
+                <i class="fa-solid fa-chart-line"></i> Báo cáo tiến trình
+              </button>
+              <button class="pt-action-btn" onclick="alert('Tính năng nhắn tin đang được phát triển...')">
+                <i class="fa-solid fa-message"></i> Nhắn tin hội viên
+              </button>
+              <button class="pt-action-btn" onclick="alert('Tính năng lên lịch đang được phát triển...')">
+                <i class="fa-solid fa-calendar-check"></i> Đặt lịch tập
+              </button>
+            </div>
+          </div>
+
+          <!-- Nutrition Edit Panel -->
+          <div class="pt-nutrition-edit-card">
+            <h3><i class="fa-solid fa-utensils"></i> Chỉnh Sửa Kế Hoạch Dinh Dưỡng</h3>
+            <div class="pt-member-select-row">
+              <label>Chọn học viên:</label>
+              <select class="pt-input-style" id="pt-select-member">
+                <option value="">-- Chọn học viên --</option>
+              </select>
+            </div>
+            <div class="pt-meal-edit-form">
+              <div class="meal-edit-row">
+                <strong>Bữa sáng (7:00):</strong>
+                <input type="text" class="pt-input-style" id="pt-meal-breakfast" value="4 lòng trắng trứng + yến mạch + chuối">
+              </div>
+              <div class="meal-edit-row">
+                <strong>Bữa trưa (12:00):</strong>
+                <input type="text" class="pt-input-style" id="pt-meal-lunch" value="200g ức gà luộc + gạo lứt + salad rau xanh">
+              </div>
+              <div class="meal-edit-row">
+                <strong>Bữa phụ chiều (16:00):</strong>
+                <input type="text" class="pt-input-style" id="pt-meal-snack" value="1 muỗng Whey Protein Isolate + 1 quả chuối sứ">
+              </div>
+              <div class="meal-edit-row">
+                <strong>Bữa tối (19:00):</strong>
+                <input type="text" class="pt-input-style" id="pt-meal-dinner" value="150g cá hồi áp chảo + măng tây nướng tỏi + salad dầu olive">
+              </div>
+              <button class="btn-primary" style="margin-top: 16px; padding: 12px 24px;" onclick="updateMealsByPT()">Cập nhật &amp; Gửi cho Hội Viên</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: ADMIN DASHBOARD SECTION -->
+    <section id="admin-section" class="hidden-section">
+      <div class="admin-wrapper">
+
+        <!-- Admin Sidebar -->
+        <aside class="admin-sidebar">
+          <div class="admin-sidebar-header">
+            <div class="admin-logo-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h2 class="admin-brand">Admin Panel</h2>
+              <span class="admin-brand-sub">SmartGym Elite</span>
+            </div>
+          </div>
+          <nav class="admin-nav">
+            <button class="admin-nav-btn active" id="admin-tab-dashboard" onclick="adminShowTab('dashboard')">
+              <i class="fa-solid fa-chart-pie"></i> Tổng Quan
+            </button>
+            <button class="admin-nav-btn" id="admin-tab-accounts" onclick="adminShowTab('accounts')">
+              <i class="fa-solid fa-users-gear"></i> Quản Lý Tài Khoản
+            </button>
+            <button class="admin-nav-btn" id="admin-tab-promos" onclick="adminShowTab('promos')">
+              <i class="fa-solid fa-tags"></i> Gói &amp; Thông Báo
+            </button>
+          </nav>
+          <div class="admin-sidebar-footer">
+            <button class="admin-logout-btn" onclick="logoutUser()">
+              <i class="fa-solid fa-right-from-bracket"></i> Đăng Xuất
+            </button>
+          </div>
+        </aside>
+
+        <!-- Admin Main Content -->
+        <div class="admin-content">
+
+          <!-- ===== TAB: DASHBOARD ===== -->
+          <div class="admin-tab-panel active" id="admin-panel-dashboard">
+            <div class="admin-page-header">
+              <div>
+                <h1 class="admin-page-title">Tổng Quan Hệ Thống</h1>
+                <p class="admin-page-sub">Thống kê hoạt động real-time của SmartGym Elite</p>
+              </div>
+              <div class="admin-header-time" id="admin-clock"></div>
+            </div>
+
+            <!-- Stat Cards -->
+            <div class="admin-stats-grid">
+              <div class="admin-stat-card stat-card-blue">
+                <div class="stat-card-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="stat-card-data">
+                  <span class="stat-card-number" id="stat-total-users">0</span>
+                  <span class="stat-card-label">Tổng Hội Viên</span>
+                </div>
+                <div class="stat-card-glow"></div>
+              </div>
+              <div class="admin-stat-card stat-card-purple">
+                <div class="stat-card-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                <div class="stat-card-data">
+                  <span class="stat-card-number" id="stat-total-pts">0</span>
+                  <span class="stat-card-label">Huấn Luyện Viên</span>
+                </div>
+                <div class="stat-card-glow"></div>
+              </div>
+              <div class="admin-stat-card stat-card-gold">
+                <div class="stat-card-icon"><i class="fa-solid fa-crown"></i></div>
+                <div class="stat-card-data">
+                  <span class="stat-card-number" id="stat-premium-users">0</span>
+                  <span class="stat-card-label">Hội Viên Premium</span>
+                </div>
+                <div class="stat-card-glow"></div>
+              </div>
+              <div class="admin-stat-card stat-card-green">
+                <div class="stat-card-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                <div class="stat-card-data">
+                  <span class="stat-card-number" id="stat-revenue">0đ</span>
+                  <span class="stat-card-label">Doanh Thu Ước Tính</span>
+                </div>
+                <div class="stat-card-glow"></div>
+              </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="admin-charts-row">
+              <!-- Membership Distribution -->
+              <div class="admin-card">
+                <h3 class="admin-card-title"><i class="fa-solid fa-chart-donut"></i> Phân Bố Gói Thành Viên</h3>
+                <div class="admin-donut-chart" id="admin-donut-chart">
+                  <svg viewBox="0 0 120 120" class="donut-svg" id="donut-svg">
+                    <circle class="donut-ring" cx="60" cy="60" r="50" fill="none" stroke="var(--border-color)" stroke-width="18"/>
+                    <circle class="donut-segment donut-premium" cx="60" cy="60" r="50" fill="none" stroke="#ffd500" stroke-width="18" stroke-dasharray="0 314" stroke-dashoffset="78.5" id="donut-premium"/>
+                    <circle class="donut-segment donut-basic" cx="60" cy="60" r="50" fill="none" stroke="var(--accent-blue)" stroke-width="18" stroke-dasharray="0 314" stroke-dashoffset="78.5" id="donut-basic"/>
+                    <circle class="donut-segment donut-none" cx="60" cy="60" r="50" fill="none" stroke="var(--text-muted)" stroke-width="18" stroke-dasharray="0 314" stroke-dashoffset="78.5" id="donut-none"/>
+                  </svg>
+                  <div class="donut-center-label">
+                    <span class="donut-pct" id="donut-pct-label">0%</span>
+                    <span class="donut-sub">Premium</span>
+                  </div>
+                </div>
+                <div class="donut-legend">
+                  <div class="legend-item"><span class="legend-dot" style="background:#ffd500"></span> Premium</div>
+                  <div class="legend-item"><span class="legend-dot" style="background:var(--accent-blue)"></span> Basic</div>
+                  <div class="legend-item"><span class="legend-dot" style="background:var(--text-muted)"></span> Chưa đăng ký</div>
+                </div>
+              </div>
+
+              <!-- Completion Rate -->
+              <div class="admin-card">
+                <h3 class="admin-card-title"><i class="fa-solid fa-chart-simple"></i> Mức Độ Hoàn Thiện Luyện Tập</h3>
+                <div class="admin-completion-bars" id="admin-completion-bars">
+                  <div class="completion-item">
+                    <div class="completion-label"><span>Đã hoàn thành khảo sát</span><span id="pct-survey">0%</span></div>
+                    <div class="completion-bar-bg"><div class="completion-bar-fill" id="bar-survey" style="width:0%; background: var(--accent-green);"></div></div>
+                  </div>
+                  <div class="completion-item">
+                    <div class="completion-label"><span>Đang tập (Tuần &ge;2)</span><span id="pct-active">0%</span></div>
+                    <div class="completion-bar-bg"><div class="completion-bar-fill" id="bar-active" style="width:0%; background: var(--accent-blue);"></div></div>
+                  </div>
+                  <div class="completion-item">
+                    <div class="completion-label"><span>Hội viên Premium</span><span id="pct-premium">0%</span></div>
+                    <div class="completion-bar-bg"><div class="completion-bar-fill" id="bar-premium" style="width:0%; background: #ffd500;"></div></div>
+                  </div>
+                  <div class="completion-item">
+                    <div class="completion-label"><span>Đã đặt meal plan</span><span id="pct-meal">0%</span></div>
+                    <div class="completion-bar-bg"><div class="completion-bar-fill" id="bar-meal" style="width:0%; background: var(--primary-red);"></div></div>
+                  </div>
+                </div>
+
+                <!-- Revenue breakdown -->
+                <h3 class="admin-card-title" style="margin-top:20px;"><i class="fa-solid fa-coins"></i> Doanh Thu Chi Tiết</h3>
+                <div class="revenue-breakdown" id="revenue-breakdown">
+                  <div class="revenue-row">
+                    <span>Gói Premium (×<span id="rev-premium-count">0</span>) @ 500,000đ</span>
+                    <strong id="rev-premium-total">0đ</strong>
+                  </div>
+                  <div class="revenue-row">
+                    <span>Gói Basic (×<span id="rev-basic-count">0</span>) @ 200,000đ</span>
+                    <strong id="rev-basic-total">0đ</strong>
+                  </div>
+                  <div class="revenue-row revenue-total">
+                    <span>Tổng cộng</span>
+                    <strong id="rev-grand-total">0đ</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Users Table -->
+            <div class="admin-card">
+              <h3 class="admin-card-title"><i class="fa-solid fa-clock-rotate-left"></i> Người Dùng Gần Đây (Top 5)</h3>
+              <div class="admin-table-wrapper">
+                <table class="admin-table" id="admin-recent-table">
+                  <thead><tr>
+                    <th>Tên</th><th>Username</th><th>Role</th><th>Gói</th><th>Khảo Sát</th><th>Giới Tính</th>
+                  </tr></thead>
+                  <tbody id="admin-recent-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== TAB: ACCOUNTS ===== -->
+          <div class="admin-tab-panel" id="admin-panel-accounts">
+            <div class="admin-page-header">
+              <div>
+                <h1 class="admin-page-title">Quản Lý Tài Khoản</h1>
+                <p class="admin-page-sub">Xem, chỉnh sửa và xóa tài khoản hội viên &amp; HLV</p>
+              </div>
+              <div class="admin-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="admin-user-search" placeholder="Tìm theo tên, username..." oninput="adminFilterUsers()">
+              </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="admin-filter-tabs">
+              <button class="admin-filter-btn active" onclick="adminSetFilter('all', this)">Tất Cả</button>
+              <button class="admin-filter-btn" onclick="adminSetFilter('member', this)">Hội Viên</button>
+              <button class="admin-filter-btn" onclick="adminSetFilter('pt', this)">Huấn Luyện Viên</button>
+              <button class="admin-filter-btn" onclick="adminSetFilter('premium', this)">Premium</button>
+              <button class="admin-filter-btn" onclick="adminSetFilter('basic', this)">Basic</button>
+            </div>
+
+            <div class="admin-card" style="padding: 0; overflow: hidden;">
+              <div class="admin-table-wrapper">
+                <table class="admin-table" id="admin-users-table">
+                  <thead><tr>
+                    <th>Họ Tên</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Gói</th>
+                    <th>Khảo Sát</th>
+                    <th>Giới Tính</th>
+                    <th>Thao Tác</th>
+                  </tr></thead>
+                  <tbody id="admin-users-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== TAB: PROMOS & NOTIFICATIONS ===== -->
+          <div class="admin-tab-panel" id="admin-panel-promos">
+            <div class="admin-page-header">
+              <div>
+                <h1 class="admin-page-title">Gói Ưu Đãi &amp; Thông Báo</h1>
+                <p class="admin-page-sub">Quản lý khuyến mãi và gửi thông báo đến hội viên</p>
+              </div>
+            </div>
+
+            <div class="admin-promo-grid">
+              <!-- Add Promo Form -->
+              <div class="admin-card">
+                <h3 class="admin-card-title"><i class="fa-solid fa-tags"></i> Thêm Gói Ưu Đãi Mới</h3>
+                <form class="admin-form" id="admin-promo-form" onsubmit="adminAddPromo(event)">
+                  <div class="admin-form-group">
+                    <label>Tên Ưu Đãi</label>
+                    <input type="text" id="promo-name" placeholder="VD: Flash Sale Tháng 7" required>
+                  </div>
+                  <div class="admin-form-group">
+                    <label>Mô Tả</label>
+                    <textarea id="promo-desc" placeholder="Mô tả chi tiết về ưu đãi..." rows="3"></textarea>
+                  </div>
+                  <div class="admin-form-row">
+                    <div class="admin-form-group">
+                      <label>% Giảm Giá</label>
+                      <input type="number" id="promo-discount" min="0" max="100" placeholder="VD: 30" required>
+                    </div>
+                    <div class="admin-form-group">
+                      <label>Ngày Hết Hạn</label>
+                      <input type="date" id="promo-expiry" required>
+                    </div>
+                  </div>
+                  <button type="submit" class="admin-btn-primary"><i class="fa-solid fa-plus"></i> Thêm Ưu Đãi</button>
+                </form>
+              </div>
+
+              <!-- Add Notification Form -->
+              <div class="admin-card">
+                <h3 class="admin-card-title"><i class="fa-solid fa-bell"></i> Gửi Thông Báo Broadcast</h3>
+                <form class="admin-form" id="admin-notify-form" onsubmit="adminAddNotification(event)">
+                  <div class="admin-form-group">
+                    <label>Tiêu Đề Thông Báo</label>
+                    <input type="text" id="notify-title" placeholder="VD: Lịch nghỉ lễ 30/4" required>
+                  </div>
+                  <div class="admin-form-group">
+                    <label>Nội Dung</label>
+                    <textarea id="notify-content" placeholder="Nội dung thông báo gửi đến tất cả hội viên..." rows="4" required></textarea>
+                  </div>
+                  <div class="admin-form-group">
+                    <label>Loại Thông Báo</label>
+                    <select id="notify-type">
+                      <option value="info">📢 Thông Tin</option>
+                      <option value="warning">⚠️ Cảnh Báo</option>
+                      <option value="success">✅ Thành Công</option>
+                      <option value="promo">🎁 Khuyến Mãi</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="admin-btn-primary"><i class="fa-solid fa-paper-plane"></i> Gửi Thông Báo</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Promos List -->
+            <div class="admin-card">
+              <h3 class="admin-card-title"><i class="fa-solid fa-list"></i> Danh Sách Ưu Đãi</h3>
+              <div id="admin-promos-list" class="admin-promos-list"></div>
+            </div>
+
+            <!-- Notifications List -->
+            <div class="admin-card">
+              <h3 class="admin-card-title"><i class="fa-solid fa-bell"></i> Lịch Sử Thông Báo</h3>
+              <div id="admin-notifications-list" class="admin-notifications-list"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ===== USER DETAIL MODAL ===== -->
+      <div class="admin-modal-overlay hidden" id="admin-user-modal">
+        <div class="admin-modal">
+          <div class="admin-modal-header">
+            <h2 id="modal-user-title">Chi Tiết Tài Khoản</h2>
+            <button class="admin-modal-close" onclick="adminCloseModal()"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="admin-modal-body" id="admin-modal-body">
+            <!-- Filled by JS -->
+          </div>
+          <div class="admin-modal-footer">
+            <button class="admin-btn-danger" id="modal-delete-btn" onclick="adminDeleteFromModal()"><i class="fa-solid fa-trash"></i> Xóa Tài Khoản</button>
+            <button class="admin-btn-secondary" onclick="adminCloseModal()">Đóng</button>
+            <button class="admin-btn-primary" id="modal-save-btn" onclick="adminSaveFromModal()"><i class="fa-solid fa-floppy-disk"></i> Lưu Thay Đổi</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Area -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <p class="footer-terms">
+        Bằng cách tiếp tục, bạn đồng ý với <a href="#" class="footer-link">Điều khoản dịch vụ</a>, <a href="#" class="footer-link">Chính sách bảo mật</a>, <a href="#" class="footer-link">Chính sách cookie</a> của chúng tôi.
+      </p>
+      <p class="footer-disclaimer">
+        TRANG WEB NÀY KHÔNG CUNG CẤP TƯ VẤN Y TẾ. LUÔN THAM KHẢO Ý KIẾN CHUYÊN GIA Y TẾ VỀ CÁC VẤN ĐỀ SỨC KHỎE.
+      </p>
+      <div class="footer-nav">
+        <a href="#" class="footer-nav-link">HỖ TRỢ</a>
+        <a href="#" class="footer-nav-link">LIÊN HỆ</a>
+        <span class="footer-lang">NGÔN NGỮ: TIẾNG VIỆT</span>
+      </div>
+      <p class="footer-copyright">&copy; 2026 SMARTGYM ELITE PERFORMANCE LAB. Bảo lưu mọi quyền.</p>
+    </div>
+  </footer>
+
+  <!-- Main Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

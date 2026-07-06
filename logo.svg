@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <rect x="2" y="2" width="236" height="56" rx="4" fill="none" stroke="#ff0e47" stroke-width="2" />
+  <text x="12" y="38" font-family="'Montserrat', sans-serif" font-weight="900" font-size="20" fill="#ffffff" letter-spacing="1">SMARTGYM</text>
+  <rect x="145" y="14" width="75" height="32" rx="2" fill="#ff0e47" />
+  <text x="156" y="36" font-family="'Montserrat', sans-serif" font-weight="900" font-size="18" fill="#ffffff" letter-spacing="1.5">ELITE</text>
+</svg>
